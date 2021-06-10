@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="components-demo">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+    <div id="blogTitle">
+        <blog-title
+            v-for="item in arr"
+            v-bind:key="item.id"
+            v-bind:title="item.title"
+            >
+        </blog-title>
+    </div>
+    <div id="baseCheckbox">
+        <base-checkbox v-model="test">{{test}}</base-checkbox>
+    </div>
+    <div id="baseInput">
+        <base-input></base-input>
+    </div>
+    <div id="app">
+        <namelist v-bind:items="items">
+            <template v-slot:item="{ item }">
+              <span v-if="item.done">✓</span>
+              {{ item.name }}
+            </template>
+        </namelist>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

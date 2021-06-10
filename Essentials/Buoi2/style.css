@@ -1,0 +1,26 @@
+.container{
+    width: 800px !important 
+}
+
+li {
+    list-style-type: none;
+    margin: 15px;
+    font-size: large;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.form-control {
+    width: 70%;
+}
+
+.submit {
+    width: 5%;
+    border-radius: 7px;
+}
+ul {
+    padding-left: 0px;
+}
